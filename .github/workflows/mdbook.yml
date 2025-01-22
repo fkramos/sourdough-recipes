@@ -32,16 +32,30 @@ jobs:
       MDBOOK_VERSION: 0.4.36
     steps:
       - uses: actions/checkout@v4
-      - name: Install mdBook
+      
+      # Se desejar instalar explicitamente o Python, você pode usar algo como:
+      # (O GitHub Actions geralmente já vem com Python por padrão,
+      # mas deixo aqui como referência caso precise de uma versão específica.)
+      # - name: Install Python
+      #   run: sudo apt-get update && sudo apt-get install -y python3
+
+      - name: Executar script Python para atualizar SUMMARY.md
+        run: |
+          python update_summary.py
+
+      - name: Instalar mdBook
         run: |
           curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
           rustup update
           cargo install --version ${MDBOOK_VERSION} mdbook
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
       - name: Build with mdBook
         run: mdbook build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
