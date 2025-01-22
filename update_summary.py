@@ -2,13 +2,12 @@
 
 import os
 import re
+import subprocess
+from typing import Tuple, List
 
-# Caminho relativo para a pasta que contém os arquivos MD.
 SRC_PATH = "src"
 SUMMARY_FILE = os.path.join(SRC_PATH, "SUMMARY.md")
 
-# Quais arquivos devem ser ignorados. 
-# Você pode adicionar ou remover itens da lista conforme necessidade.
 EXCLUDED_FILES = ["README.md", "SUMMARY.md"]
 
 def extract_title_from_md(file_path: str) -> str:
@@ -20,34 +19,69 @@ def extract_title_from_md(file_path: str) -> str:
     with open(file_path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
-            if line.startswith("#"):  # Ex: '# Meu Título'
-                # Remove todos os '#' e espaços extras para pegar só o título limpo.
+            if line.startswith("#"):  # Exemplo: '# Meu Título'
+                # Remove todos os '#' e espaços para pegar só o título limpo.
                 title = re.sub(r"^#+\s*", "", line)
                 break
     return title
 
+def get_file_creation_timestamp(file_path: str) -> int:
+    """
+    Retorna, em Unix timestamp (segundos), a data do primeiro commit que adicionou o arquivo.
+    Caso não seja encontrado, retorna 0.
+    """
+    # Este comando filtra commits que adicionaram (A) o arquivo
+    # e formata a data em segundos (Unix epoch).
+    # O 'head -1' vai pegar o commit mais antigo (o primeiro) que adicionou o arquivo.
+    cmd = [
+        "git", "log", "--diff-filter=A", "--follow", 
+        "--format=%at",  # apenas o timestamp
+        file_path
+    ]
+    try:
+        # Captura a saída do git log
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        # Pega a primeira linha (primeira data), se existir
+        lines = result.stdout.strip().splitlines()
+        if lines:
+            return int(lines[-1])  # se quiser pegar o mais antigo, use lines[-1] ou lines[0], dependendo da ordem
+        else:
+            return 0
+    except subprocess.CalledProcessError:
+        return 0
+
 def main():
-    # 1. Coletar todos os arquivos MD em src, exceto aqueles em EXCLUDED_FILES.
+    # Coletar arquivos MD em src, exceto os da lista de exclusão
     md_files = []
     for entry in os.scandir(SRC_PATH):
         if entry.is_file() and entry.name.endswith(".md") and entry.name not in EXCLUDED_FILES:
             md_files.append(entry.path)
 
-    # 2. Ordenar alfabeticamente, se desejar, ou deixar na ordem de criação.
-    md_files.sort()
+    # Obter timestamp do primeiro commit de cada arquivo e ordenar
+    # Quanto maior o timestamp, mais recente. Se você quiser do mais antigo para o mais recente,
+    # altere a lógica conforme desejar.
+    # Neste exemplo, ordenamos do mais antigo (menor timestamp) para o mais novo (maior timestamp).
+    file_with_dates = []
+    for fpath in md_files:
+        timestamp = get_file_creation_timestamp(fpath)
+        file_with_dates.append((fpath, timestamp))
 
-    # 3. Extrair títulos e construir conteúdo do SUMMARY.md.
+    # Ordena pelos timestamps (do menor para o maior)
+    file_with_dates.sort(key=lambda x: x[1])
+
+    # Monta as linhas para o SUMMARY.md
     lines = [
         "# Sumário\n",
         "\n",
-        "[Início](README.md)\n",
+        "* [Início](README.md)\n",
     ]
-    for md_file in md_files:
-        title = extract_title_from_md(md_file)
-        filename = os.path.basename(md_file)
+
+    for fpath, _timestamp in file_with_dates:
+        title = extract_title_from_md(fpath)
+        filename = os.path.basename(fpath)
         lines.append(f"* [{title}]({filename})\n")
 
-    # 4. Escrever o arquivo SUMMARY.md.
+    # Escreve o novo SUMMARY.md
     with open(SUMMARY_FILE, "w", encoding="utf-8") as f:
         f.writelines(lines)
 
