@@ -1,44 +1,55 @@
+#!/usr/bin/env python3
+
 import os
 import re
 
-def generate_summary(src_dir):
-    summary = "# Summary\n\n"
-    
-    # Ignorar o próprio SUMMARY.md
-    exclude_files = {'SUMMARY.md'}
-    
-    for root, dirs, files in os.walk(src_dir):
-        # Ordena diretórios e arquivos
-        dirs.sort()
-        files.sort()
-        
-        # Calcula o nível de indentação baseado na profundidade do diretório
-        level = root[len(src_dir):].count(os.sep)
-        indent = '    ' * level
-        
-        # Adiciona os arquivos markdown do diretório atual
-        for file in files:
-            if file.endswith('.md') and file not in exclude_files:
-                # Lê o título do arquivo MD (primeira linha # Título)
-                file_path = os.path.join(root, file)
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    title_match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
-                    title = title_match.group(1) if title_match else file[:-3]
-                
-                # Cria o caminho relativo
-                rel_path = os.path.relpath(file_path, src_dir)
-                summary += f'{indent}- [{title}]({rel_path})\n'
-    
-    return summary
+# Caminho relativo para a pasta que contém os arquivos MD.
+SRC_PATH = "src"
+SUMMARY_FILE = os.path.join(SRC_PATH, "SUMMARY.md")
 
-def update_summary(src_dir):
-    summary_content = generate_summary(src_dir)
-    summary_path = os.path.join(src_dir, 'SUMMARY.md')
-    
-    with open(summary_path, 'w', encoding='utf-8') as f:
-        f.write(summary_content)
+# Quais arquivos devem ser ignorados. 
+# Você pode adicionar ou remover itens da lista conforme necessidade.
+EXCLUDED_FILES = ["README.md", "SUMMARY.md"]
+
+def extract_title_from_md(file_path: str) -> str:
+    """
+    Extrai o título de um arquivo Markdown pela primeira linha que inicia com '#'.
+    Se não encontrar, usa o nome do arquivo (sem extensão) como título.
+    """
+    title = os.path.splitext(os.path.basename(file_path))[0]
+    with open(file_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith("#"):  # Ex: '# Meu Título'
+                # Remove todos os '#' e espaços extras para pegar só o título limpo.
+                title = re.sub(r"^#+\s*", "", line)
+                break
+    return title
+
+def main():
+    # 1. Coletar todos os arquivos MD em src, exceto aqueles em EXCLUDED_FILES.
+    md_files = []
+    for entry in os.scandir(SRC_PATH):
+        if entry.is_file() and entry.name.endswith(".md") and entry.name not in EXCLUDED_FILES:
+            md_files.append(entry.path)
+
+    # 2. Ordenar alfabeticamente, se desejar, ou deixar na ordem de criação.
+    md_files.sort()
+
+    # 3. Extrair títulos e construir conteúdo do SUMMARY.md.
+    lines = [
+        "# Sumário\n",
+        "\n",
+        "* [Início](README.md)\n",
+    ]
+    for md_file in md_files:
+        title = extract_title_from_md(md_file)
+        filename = os.path.basename(md_file)
+        lines.append(f"* [{title}]({filename})\n")
+
+    # 4. Escrever o arquivo SUMMARY.md.
+    with open(SUMMARY_FILE, "w", encoding="utf-8") as f:
+        f.writelines(lines)
 
 if __name__ == "__main__":
-    src_dir = "./src"  # Ajuste para o caminho da sua pasta src
-    update_summary(src_dir)
+    main()
