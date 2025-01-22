@@ -73,7 +73,6 @@ def main():
     lines = [
         "# Sumário\n",
         "\n",
-        "* [Início](README.md)\n",
     ]
 
     for fpath, _timestamp in file_with_dates:
