@@ -40,7 +40,7 @@ def main():
     lines = [
         "# Sumário\n",
         "\n",
-        "* [Início](README.md)\n",
+        "[Início](README.md)\n",
     ]
     for md_file in md_files:
         title = extract_title_from_md(md_file)
