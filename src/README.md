@@ -1,0 +1,3 @@
+A ideia desse repositório é guardar os registros de todas minhas produções caseiras de panificação de fermentação natural.  Com isso, tentar aprender com os erros, relembrar os acertos e melhorar minhas produções. 
+
+Os registros são feitos usando ferramente de LLM.  Onde eu vou inicialmente relatando cada passo e posteriormente eu solicito que seja criado o markdown para publicar nesse repositório. Futuramente vou publicar aqui também o prompt que eu uso para isso.
