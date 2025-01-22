@@ -14,7 +14,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -32,17 +32,19 @@ jobs:
       MDBOOK_VERSION: 0.4.36
     steps:
       - uses: actions/checkout@v4
-      
-      # Se desejar instalar explicitamente o Python, você pode usar algo como:
-      # (O GitHub Actions geralmente já vem com Python por padrão,
-      # mas deixo aqui como referência caso precise de uma versão específica.)
-      # - name: Install Python
-      #   run: sudo apt-get update && sudo apt-get install -y python3
-
+     
       - name: Executar script Python para atualizar SUMMARY.md
         run: |
           python update_summary.py
-
+          
+      - name: Commit updated SUMMARY.md
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add src/SUMMARY.md
+          git commit -m "Atualiza SUMMARY.md automaticamente"
+          git push
+    
       - name: Instalar mdBook
         run: |
           curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
