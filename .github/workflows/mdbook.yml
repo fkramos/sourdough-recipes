@@ -43,9 +43,15 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+          
           git add src/SUMMARY.md
-          git commit -m "Atualiza SUMMARY.md automaticamente"
-          git push
+          # Verifica se há algo adicionado (ou seja, se o 'git add' mudou algo)
+          if git diff-index --cached --quiet HEAD; then
+            echo "Nenhuma mudança para commitar."
+          else
+            git commit -m "Atualiza SUMMARY.md automaticamente"
+            git push
+          fi
     
       - name: Instalar mdBook
         run: |
