@@ -1,6 +1,7 @@
 # Sumário
 
 * [Início](README.md)
+* [Focaccia Levain com Mistura de Semolina (20%) e Farinha Manitoba ORO](segunda_2025.md)
 
 ## Focaccias
 
