@@ -86,8 +86,9 @@ def main():
     # Ordena as subpastas
     subfolders_sorted = sorted(subfolders_map.keys())
 
+    # Primeiro adiciona todas as subpastas e seus arquivos
     for subfolder in subfolders_sorted:
-        if not subfolder:  # Pula arquivos na raiz
+        if not subfolder:  # Pula arquivos na raiz (serão tratados depois)
             continue
 
         # Ordena arquivos por timestamp (mais antigo primeiro)
@@ -106,6 +107,18 @@ def main():
                 continue
             file_rel_to_src = os.path.relpath(fpath, SRC_PATH)
             lines.append(f"    - [{title}]({file_rel_to_src})\n")
+
+    # Adiciona os arquivos da raiz, se houver
+    if "" in subfolders_map and subfolders_map[""]:
+        lines.append("\n---\n\n")  # Linha separadora
+        
+        # Ordena os arquivos da raiz por timestamp
+        root_files = sorted(subfolders_map[""], key=lambda x: x[0])
+        
+        # Adiciona cada arquivo da raiz
+        for timestamp, fpath, title in root_files:
+            file_name = os.path.basename(fpath)
+            lines.append(f"[{title}]({file_name})\n")
 
     # Salva o arquivo
     with open(SUMMARY_FILE, "w", encoding="utf-8") as f:
