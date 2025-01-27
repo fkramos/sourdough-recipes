@@ -83,7 +83,7 @@ def main():
     lines = [
         "# Sumário\n",
         "\n",
-        "* [Início](README.md)\n",
+        "[Início](README.md)\n",
     ]
 
     # Ordena as subpastas pelo nome (alfabético) apenas para uma ordem previsível de seções
