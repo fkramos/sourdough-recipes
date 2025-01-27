@@ -96,7 +96,7 @@ def main():
 
     for subfolder in subfolders_sorted:
         # Ordena os arquivos desta subpasta pelo timestamp (mais antigo primeiro)
-        subfolders_map[subfolder].sort(key=lambda x: x[0])
+        subfolders_map[subfolder].sort(key=lambda x: x[0], reverse=True)
 
         # Se subfolder for vazio, quer dizer que está na raiz do SRC.
         # Podemos criar uma sessão só se não for vazio, caso deseje ignorar a raiz.
