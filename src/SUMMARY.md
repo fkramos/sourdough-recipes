@@ -1,6 +1,6 @@
 # Sumário
 
-[Início](README.md)
+* [Início](README.md)
 
 ## Focaccias
 
