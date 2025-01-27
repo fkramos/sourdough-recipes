@@ -38,7 +38,7 @@ def get_file_creation_timestamp(file_path: str) -> int:
     cmd = [
         "git", "log", "--diff-filter=A", "--follow",
         "--format=%at",  # apenas o timestamp Unix
-        file_path
+        "--", file_path  # Adicionado '--' para evitar problemas com paths que começam com '-'
     ]
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
