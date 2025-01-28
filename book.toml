@@ -13,4 +13,5 @@ default-theme = "light"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/fkramos/sourdough-recipes"
 additional-js = ["theme/mermaid.min.js", "theme/mermaid-init.js"]
+additional-css = ["./mdbook-admonish.css"]
 
