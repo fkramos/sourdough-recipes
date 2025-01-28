@@ -63,6 +63,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Install mdbook-mermaid
+        run: |
+          cargo install mdbook-mermaid
+          mkdir theme
+          curl -o theme/mermaid.min.js https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
+          echo "mermaid.initialize({ startOnLoad: true });" > theme/mermaid-init.js        
+
       - name: Build with mdBook
         run: mdbook build
 
