@@ -1,4 +1,3 @@
-```md
 # Primeira Focaccia de 2025
 
 Receita e registro de todos os passos realizados na produção de uma focaccia de fermentação natural (Levain), conforme relatado detalhadamente entre 13 e 16 de janeiro de 2025. Todos os horários, pesos, temperaturas, farinhas e observações descritas abaixo são fiéis ao que foi reportado no processo.
@@ -273,4 +272,3 @@ Para reduzir o azedo, usar o Levain ainda em ascensão (ao invés de já em decl
 **Fim do documento**  
 Este registro contempla exclusivamente aquilo que foi relatado, com a inclusão de uma análise crítica final do processo, sem inferências além das sugestões para possíveis melhorias.
 :::
-```
