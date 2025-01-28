@@ -1,4 +1,3 @@
-```markdown
 # Primeira Focaccia de 2025  
 *Focaccia de fermentação natural com tomate cereja, alecrim e toque azedo característico*  
 
@@ -141,5 +140,4 @@ Descoberta:
 
 ---
 
-📌 **Documentação Finalizada em**: 16/01/2025  
-```
+📌 **Documentação Finalizada em**: 16/01/2025

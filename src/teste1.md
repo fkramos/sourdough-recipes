@@ -1,4 +1,3 @@
-```markdown
 # Primeira Focaccia de 2025  
 *Focaccia de fermentação natural com tomate cereja, alecrim e toque azedo característico*  
 
@@ -129,5 +128,3 @@ graph TD
 ✂️ **Corte Transversal Documentado**:  
 ![Descrição Visual](https://via.placeholder.com/400x300?text=Miolo+Aerado+com+Tomate+e+Alecrim)  
 *(Ilustração conceitual - substituir por foto real)*
-
-```
