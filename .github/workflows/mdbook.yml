@@ -36,7 +36,7 @@ jobs:
         uses: jontze/action-mdbook@v3.0.1          
         with:
           token: ${{secrets.GITHUB_TOKEN}}
-          mdbook-version: "~0.4.40" # Use a semver compatible string
+          mdbook-version: "0.4.40" # Use a semver compatible string
           use-mermaid: true
           use-admonish: true          
       - name: Show mdbook version
