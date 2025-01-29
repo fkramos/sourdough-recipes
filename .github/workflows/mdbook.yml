@@ -70,6 +70,9 @@ jobs:
         run: |
           cargo binstall mdbook-admonish
 
+      - name: Update mermaid assets
+        run: mdbook-mermaid install
+
       - name: Update admonish assets
         run: mdbook-admonish install
 

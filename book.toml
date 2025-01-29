@@ -5,16 +5,8 @@ multilingual = false
 src = "src"
 title = "Sourdough Recipes"
 
-[preprocessor.mermaid]
-command = "mdbook-mermaid"
-
-[preprocessor.admonish]
-command = "mdbook-admonish"
-
 [output.html]
 default-theme = "light"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/fkramos/sourdough-recipes"
-additional-js = ["mermaid.min.js", "mermaid-init.js"]
-additional-css = ["./mdbook-admonish.css"]
 
