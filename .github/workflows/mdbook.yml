@@ -32,7 +32,19 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-     
+      - name: mdBook Action with plugins
+        uses: jontze/action-mdbook@v3.0.1          
+          with:
+            token: ${{secrets.GITHUB_TOKEN}}
+            use-mermaid: true
+            use-admonish: true          
+      - name: Show mdbook version
+        run: mdbook --version
+      - name: Show mermaid version
+        run: mdbook-mermaid --version
+      - name: Show admonish version
+        run: mdbook-admonish --version
+      
       - name: Executar script Python para atualizar SUMMARY.md
         run: |
           python update_summary.py
@@ -51,28 +63,10 @@ jobs:
             git push
           fi
     
-      - name: Instalar mdBook
-        run: |
-          curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
-          rustup update
-          cargo install mdbook
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Install mdbook-mermaid
-        run: |
-          cargo install mdbook-mermaid
-          mkdir theme
-          curl -o theme/mermaid.min.js https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js
-          echo "mermaid.initialize({ startOnLoad: true });" > theme/mermaid-init.js        
-
-      - name: Install mdbook-admonish
-        run: |
-          cargo install mdbook-admonish
-          curl -sSL $(curl -s https://api.github.com/repos/tommilligan/mdbook-admonish/releases/latest | grep browser_download_url | grep css | cut -d '"' -f 4) -o mdbook-admonish.css
-          
       - name: Build with mdBook
         run: mdbook build
 
