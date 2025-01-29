@@ -34,10 +34,10 @@ jobs:
           fetch-depth: 0
       - name: mdBook Action with plugins
         uses: jontze/action-mdbook@v3.0.1          
-          with:
-            token: ${{secrets.GITHUB_TOKEN}}
-            use-mermaid: true
-            use-admonish: true          
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          use-mermaid: true
+          use-admonish: true          
       - name: Show mdbook version
         run: mdbook --version
       - name: Show mermaid version
