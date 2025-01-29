@@ -68,6 +68,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Update admonish assets
+        run: mdbook-admonish install
+
       - name: Build with mdBook
         run: mdbook build
 
