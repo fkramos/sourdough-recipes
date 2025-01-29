@@ -32,19 +32,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: mdBook Action with plugins
-        uses: jontze/action-mdbook@v3.0.1          
-        with:
-          token: ${{secrets.GITHUB_TOKEN}}
-          mdbook-version: "0.4.36" # Use a semver compatible string
-          use-mermaid: true
-          use-admonish: true          
-      - name: Show mdbook version
-        run: mdbook --version
-      - name: Show mermaid version
-        run: mdbook-mermaid --version
-      - name: Show admonish version
-        run: mdbook-admonish --version
       
       - name: Executar script Python para atualizar SUMMARY.md
         run: |
@@ -67,6 +54,21 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
+      - name: Cargo Binary Install
+        uses: cargo-bins/cargo-binstall@main      
+
+      - name: Instalar mdBook
+        run: |
+          cargo binstall mdbook
+
+      - name: Instalar mdbook-mermaid
+        run: |
+          cargo binstall mdbook-mermaid
+
+      - name: Instalar mdbook-admonish
+        run: |
+          cargo binstall mdbook-admonish
 
       - name: Update admonish assets
         run: mdbook-admonish install
