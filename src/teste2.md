@@ -126,20 +126,20 @@ Uma focaccia fermentada naturalmente com levain (fermento natural), passando por
 
 ```mermaid
 graph TD
-    A((13/01 - Final da tarde)) -->|4-5 h| B[13/01 - 21:30<br>1ª Renovação do Levain]
-    B -->|10 h| C[14/01 - 07:30<br>2ª Renovação]
-    C -->|12 h| D[14/01 - 19:30<br>Autólise (280 g água + 375 g farinha)]
-    D -->|1h30| E[14/01 - 21:00<br>Adição do levain, sal, água]
-    E -->|30 min| F[14/01 - 21:30<br>1º Coil Fold]
-    F -->|30 min| G[14/01 - 22:00<br>2º Coil Fold]
-    G -->|30 min| H[14/01 - 22:30<br>3º Coil Fold]
-    H -->|30 min| I[14/01 - 23:00<br>4º Coil Fold]
-    I -->|15 min| J[14/01 - 23:15<br>Massa na geladeira]
-    J -->|18h15| K[15/01 - 17:30<br>Retirada da Geladeira]
-    K -->|3h30| L[15/01 - 21:00<br>Modelagem]
-    L -->|1h30| M[15/01 - 22:30<br>Dimpling + Forno a gás (30 min)]
-    M -->|8 min| N[15/01 - 22:38<br>Forno elétrico + Retirada]
-    N --> O[16/01 - Manhã<br>Consumo da focaccia]
+    A["13/01 - Final da tarde / Pote de levain ativo (início)"] -->|"4–5 horas"| B["13/01 - 21:30 / 1ª Renovação do Levain"]
+    B -->|"~10 horas"| C["14/01 - 07:30 / 2ª Renovação"]
+    C -->|"~12 horas"| D["14/01 - 19:30 / Autólise"]
+    D -->|"1h30"| E["14/01 - 21:00 / Adição do levain, sal, água"]
+    E -->|"30 min"| F["14/01 - 21:30 / 1º Coil Fold"]
+    F -->|"30 min"| G["14/01 - 22:00 / 2º Coil Fold"]
+    G -->|"30 min"| H["14/01 - 22:30 / 3º Coil Fold"]
+    H -->|"30 min"| I["14/01 - 23:00 / 4º Coil Fold"]
+    I -->|"15 min"| J["14/01 - 23:15 / Massa na geladeira"]
+    J -->|"~18h15"| K["15/01 - 17:30 / Retirada da geladeira"]
+    K -->|"3h30"| L["15/01 - 21:00 / Modelagem"]
+    L -->|"1h30"| M["15/01 - 22:30 / Dimpling + Forno a gás"]
+    M -->|"~8 min"| N["15/01 - 22:38 / Forno elétrico + Retirada"]
+    N --> O["16/01 - Manhã / Consumo da focaccia"]
 ```
 
 ## Dicas, Dificuldades e Descobertas

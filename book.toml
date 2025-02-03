@@ -9,4 +9,4 @@ title = "Sourdough Recipes"
 default-theme = "light"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/fkramos/sourdough-recipes"
-
+mathjax-support = true
