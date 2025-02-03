@@ -125,7 +125,7 @@ Uma focaccia fermentada naturalmente com levain (fermento natural), passando por
 ## Diagrama do Processo
 
 ```mermaid
-flowchart TD
+graph TD
     A((13/01 - Final da tarde)) -->|4-5 h| B[13/01 - 21:30<br>1ª Renovação do Levain]
     B -->|10 h| C[14/01 - 07:30<br>2ª Renovação]
     C -->|12 h| D[14/01 - 19:30<br>Autólise (280 g água + 375 g farinha)]
