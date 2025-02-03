@@ -23,10 +23,10 @@ Uma focaccia fermentada naturalmente com levain (fermento natural), passando por
 
 | Data       | Horário          | Ação                                                                                                                     | Duração (desde a etapa anterior) |
 |------------|------------------|--------------------------------------------------------------------------------------------------------------------------|----------------------------------|
-| **13/01**  | Final da tarde  | Pote de levain ativo retirado com o amigo Nuno.                                                                          | -                                |
-| **13/01**  | 21:30           | Renovação do levain (1:2:3).                                                                                             | ~4–5 h após receber o levain     |
-| **14/01**  | 07:30           | 2ª Renovação do levain.                                                                                                  | 10 h após a 1ª renovação         |
-| **14/01**  | 19:30           | Início da autólise (280 g de água + 375 g de farinha).                                                                    | 12 h após a 2ª renovação         |
+| **13/01**  | Final da tarde  | Pote de levain ativo retirado com o amigo Nuno.                                                                          | –                                |
+| **13/01**  | 21:30           | Renovação do levain (1:2:3).                                                                                             | 4–5 horas após receber o levain  |
+| **14/01**  | 07:30           | 2ª Renovação do levain.                                                                                                  | ~10 horas após a 1ª renovação    |
+| **14/01**  | 19:30           | Início da autólise (280 g de água + 375 g de farinha).                                                                    | ~12 horas após a 2ª renovação    |
 | **14/01**  | 21:00           | Adição do levain (75 g), sal (7,5 g) e água (85 g + 10 g), mistura na batedeira.                                          | 1h30 após o início da autólise   |
 | **14/01**  | 21:30           | 1º coil fold.                                                                                                             | 30 min após a mistura            |
 | **14/01**  | 22:00           | 2º coil fold.                                                                                                             | 30 min                            |
@@ -36,8 +36,8 @@ Uma focaccia fermentada naturalmente com levain (fermento natural), passando por
 | **15/01**  | 17:30           | Massa retirada da geladeira e deixada em temperatura ambiente.                                                             | ~18h15 após ir à geladeira       |
 | **15/01**  | 21:00           | Modelagem na forma untada.                                                                                                 | 3h30 após sair da geladeira      |
 | **15/01**  | 22:30           | Dimpling, coberturas (tomates, alecrim, sal grosso, azeite) e forno a gás (~30 min).                                       | 1h30 após modelagem              |
-| **15/01**  | ~22:38          | Transição para forno elétrico (~8 min) e retirada do forno.                                                                | ~8 min após o forno a gás        |
-| **16/01**  | Manhã           | Consumo da focaccia no café da manhã.                                                                                     | -                                |
+| **15/01**  | 22:38 (aprox.)  | Transição para forno elétrico (~8 min) e retirada do forno.                                                                | ~8 min após o forno a gás        |
+| **16/01**  | Manhã           | Consumo da focaccia no café da manhã.                                                                                     | –                                |
 
 ## Ingredientes
 
@@ -126,19 +126,19 @@ Uma focaccia fermentada naturalmente com levain (fermento natural), passando por
 
 ```mermaid
 flowchart TD
-    A((13/01 - Final da tarde)) -->|"~4–5 h"| B[13/01 - 21:30<br>1ª Renovação do Levain]
-    B -->|"10 h"| C[14/01 - 07:30<br>2ª Renovação]
-    C -->|"12 h"| D[14/01 - 19:30<br>Autólise (280 g água + 375 g farinha)]
-    D -->|"1h30"| E[14/01 - 21:00<br>Adição do levain, sal, água]
-    E -->|"30 min"| F[14/01 - 21:30<br>1º Coil Fold]
-    F -->|"30 min"| G[14/01 - 22:00<br>2º Coil Fold]
-    G -->|"30 min"| H[14/01 - 22:30<br>3º Coil Fold]
-    H -->|"30 min"| I[14/01 - 23:00<br>4º Coil Fold]
-    I -->|"15 min"| J[14/01 - 23:15<br>Massa na geladeira]
-    J -->|"~18h15"| K[15/01 - 17:30<br>Retirada da Geladeira]
-    K -->|"3h30"| L[15/01 - 21:00<br>Modelagem]
-    L -->|"1h30"| M[15/01 - 22:30<br>Dimpling + Forno a gás (~30 min)]
-    M -->|"~8 min"| N[15/01 - ~22:38<br>Forno elétrico + Retirada]
+    A((13/01 - Final da tarde)) -->|4-5 h| B[13/01 - 21:30<br>1ª Renovação do Levain]
+    B -->|10 h| C[14/01 - 07:30<br>2ª Renovação]
+    C -->|12 h| D[14/01 - 19:30<br>Autólise (280 g água + 375 g farinha)]
+    D -->|1h30| E[14/01 - 21:00<br>Adição do levain, sal, água]
+    E -->|30 min| F[14/01 - 21:30<br>1º Coil Fold]
+    F -->|30 min| G[14/01 - 22:00<br>2º Coil Fold]
+    G -->|30 min| H[14/01 - 22:30<br>3º Coil Fold]
+    H -->|30 min| I[14/01 - 23:00<br>4º Coil Fold]
+    I -->|15 min| J[14/01 - 23:15<br>Massa na geladeira]
+    J -->|18h15| K[15/01 - 17:30<br>Retirada da Geladeira]
+    K -->|3h30| L[15/01 - 21:00<br>Modelagem]
+    L -->|1h30| M[15/01 - 22:30<br>Dimpling + Forno a gás (30 min)]
+    M -->|8 min| N[15/01 - 22:38<br>Forno elétrico + Retirada]
     N --> O[16/01 - Manhã<br>Consumo da focaccia]
 ```
 
