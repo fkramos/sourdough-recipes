@@ -21,53 +21,53 @@ Uma focaccia fermentada naturalmente com levain (fermento natural), passando por
 
 ## Cronograma Detalhado
 
-| Data       | Horário  | Ação                                                                                                                     |
-|------------|----------|--------------------------------------------------------------------------------------------------------------------------|
-| **13/01**  | Final da tarde | Pote de levain ativo retirado com o amigo Nuno.                                                                      |
-| **13/01**  | 21:30    | Renovação do levain (1ª renovação): 20 g de levain + 40 g de água + 60 g de farinha.                                       |
-| **14/01**  | 07:30    | Renovação do levain (2ª renovação): 20 g de levain + 60 g de água fria + 90 g de farinha.                                  |
-| **14/01**  | 19:30    | Início da autólise com 280 g de água + 375 g de farinha (Farinha 5 Stagioni ORO).                                         |
-| **14/01**  | 21:00    | Diluição do levain (75 g) em 85 g de água e do sal (7,5 g) em 10 g de água, mistura na batedeira.                          |
-| **14/01**  | 21:30    | 1º coil fold.                                                                                                             |
-| **14/01**  | 22:00    | 2º coil fold.                                                                                                             |
-| **14/01**  | 22:30    | 3º coil fold.                                                                                                             |
-| **14/01**  | 23:00    | 4º coil fold.                                                                                                             |
-| **14/01**  | 23:15    | Massa transferida para recipiente maior, tampada e levada à geladeira.                                                    |
-| **15/01**  | 17:30    | Massa retirada da geladeira e deixada em temperatura ambiente.                                                             |
-| **15/01**  | 21:00    | Modelagem na forma untada, dobra simples, azeite na superfície. Forno a gás pré-aquecido (máximo) com pedra refratária.    |
-| **15/01**  | 22:30    | Dimpling, coberturas (tomates-cereja, alecrim, sal grosso, azeite) e forno: ~30 min no forno a gás + ~8 min no forno elétrico. |
-| **15/01**  | ~22:38   | Focaccia retirada do forno e colocada em grade para esfriar.                                                               |
-| **16/01**  | Manhã    | Consumo da focaccia no café da manhã.                                                                                     |
+| Data       | Horário          | Ação                                                                                                                     | Duração (desde a etapa anterior) |
+|------------|------------------|--------------------------------------------------------------------------------------------------------------------------|----------------------------------|
+| **13/01**  | Final da tarde  | Pote de levain ativo retirado com o amigo Nuno.                                                                          | -                                |
+| **13/01**  | 21:30           | Renovação do levain (1:2:3).                                                                                             | ~4–5 h após receber o levain     |
+| **14/01**  | 07:30           | 2ª Renovação do levain.                                                                                                  | 10 h após a 1ª renovação         |
+| **14/01**  | 19:30           | Início da autólise (280 g de água + 375 g de farinha).                                                                    | 12 h após a 2ª renovação         |
+| **14/01**  | 21:00           | Adição do levain (75 g), sal (7,5 g) e água (85 g + 10 g), mistura na batedeira.                                          | 1h30 após o início da autólise   |
+| **14/01**  | 21:30           | 1º coil fold.                                                                                                             | 30 min após a mistura            |
+| **14/01**  | 22:00           | 2º coil fold.                                                                                                             | 30 min                            |
+| **14/01**  | 22:30           | 3º coil fold.                                                                                                             | 30 min                            |
+| **14/01**  | 23:00           | 4º coil fold.                                                                                                             | 30 min                            |
+| **14/01**  | 23:15           | Massa transferida para recipiente maior, tampada e levada à geladeira.                                                    | 15 min                            |
+| **15/01**  | 17:30           | Massa retirada da geladeira e deixada em temperatura ambiente.                                                             | ~18h15 após ir à geladeira       |
+| **15/01**  | 21:00           | Modelagem na forma untada.                                                                                                 | 3h30 após sair da geladeira      |
+| **15/01**  | 22:30           | Dimpling, coberturas (tomates, alecrim, sal grosso, azeite) e forno a gás (~30 min).                                       | 1h30 após modelagem              |
+| **15/01**  | ~22:38          | Transição para forno elétrico (~8 min) e retirada do forno.                                                                | ~8 min após o forno a gás        |
+| **16/01**  | Manhã           | Consumo da focaccia no café da manhã.                                                                                     | -                                |
 
 ## Ingredientes
 
 ### Massa Principal
 
-| Ingrediente                | Peso  | % de Padeiro |
-|----------------------------|-------|-------------:|
-| Farinha (5 Stagioni ORO)  | 375 g |  100%        |
-| Água (total)              | 375 g |  100%        |
-| Levain (ativo)            | 75 g  |   20%        |
-| Sal                        | 7,5 g |    2%        |
+| Ingrediente                | Peso   | % de Padeiro |
+|----------------------------|--------|-------------:|
+| Farinha (5 Stagioni ORO)  | 375 g  |  100%        |
+| Água (total)              | 375 g  |  100%        |
+| Levain (ativo)            | 75 g   |   20%        |
+| Sal                        | 7,5 g  |    2%        |
 
 - **Hidratação Total**: 100%
 
 ### Cobertura
 
-- Azeite de oliva
-- Tomates-cereja
-- Alecrim fresco
-- Sal grosso
+- Azeite de oliva  
+- Tomates-cereja  
+- Alecrim fresco  
+- Sal grosso  
 
 ## Equipamentos Utilizados
 
-- Recipiente de vidro (Marinex) ou tigela grande para a massa
-- Batedeira planetária com gancho
-- Forma retangular untada
-- Pedra refratária (no forno a gás)
-- Forno a gás (aquecimento inferior) e forno elétrico (aquecimento superior)
-- Termômetro para forno
-- Grade para resfriamento
+- Recipiente de vidro (Marinex) ou tigela grande para a massa  
+- Batedeira planetária com gancho  
+- Forma retangular untada  
+- Pedra refratária (no forno a gás)  
+- Forno a gás (aquecimento inferior) e forno elétrico (aquecimento superior)  
+- Termômetro para forno  
+- Grade para resfriamento  
 
 ## Passo a Passo Detalhado
 
@@ -100,9 +100,9 @@ Uma focaccia fermentada naturalmente com levain (fermento natural), passando por
 
 7. **Modelagem (15/01 - 21:00)**  
    - Unte a forma com azeite.  
-   - Vire a massa na forma e faça uma dobra simples (tipo um envelope).  
+   - Vire a massa na forma e faça uma dobra simples (tipo envelope).  
    - Deixe a dobra voltada para baixo.  
-   - Cubra com azeite a superfície.
+   - Cubra com azeite na superfície.
 
 8. **Pré-Aquecimento do Forno**  
    - Forno a gás com pedra refratária no máximo (~250 °C).  
@@ -126,19 +126,19 @@ Uma focaccia fermentada naturalmente com levain (fermento natural), passando por
 
 ```mermaid
 flowchart TD
-    A((13/01 - Tarde)) --> B[13/01 - 21:30<br>Renovação do Levain (1:2:3)]
-    B --> C[14/01 - 07:30<br>2ª Renovação]
-    C --> D[14/01 - 19:30<br>Autólise (280 g água + 375 g farinha)]
-    D --> E[14/01 - 21:00<br>Adição do levain, sal, água<br>Mistura na batedeira]
-    E --> F[14/01 - 21:30<br>1º Coil Fold]
-    F --> G[14/01 - 22:00<br>2º Coil Fold]
-    G --> H[14/01 - 22:30<br>3º Coil Fold]
-    H --> I[14/01 - 23:00<br>4º Coil Fold]
-    I --> J[14/01 - 23:15<br>Massa na geladeira]
-    J --> K[15/01 - 17:30<br>Retirada da geladeira]
-    K --> L[15/01 - 21:00<br>Modelagem na forma]
-    L --> M[15/01 - 22:30<br>Dimpling + cobertura<br>Assamento]
-    M --> N[15/01 - ~22:38<br>Retirada do forno]
+    A((13/01 - Final da tarde)) -->|"~4–5 h"| B[13/01 - 21:30<br>1ª Renovação do Levain]
+    B -->|"10 h"| C[14/01 - 07:30<br>2ª Renovação]
+    C -->|"12 h"| D[14/01 - 19:30<br>Autólise (280 g água + 375 g farinha)]
+    D -->|"1h30"| E[14/01 - 21:00<br>Adição do levain, sal, água]
+    E -->|"30 min"| F[14/01 - 21:30<br>1º Coil Fold]
+    F -->|"30 min"| G[14/01 - 22:00<br>2º Coil Fold]
+    G -->|"30 min"| H[14/01 - 22:30<br>3º Coil Fold]
+    H -->|"30 min"| I[14/01 - 23:00<br>4º Coil Fold]
+    I -->|"15 min"| J[14/01 - 23:15<br>Massa na geladeira]
+    J -->|"~18h15"| K[15/01 - 17:30<br>Retirada da Geladeira]
+    K -->|"3h30"| L[15/01 - 21:00<br>Modelagem]
+    L -->|"1h30"| M[15/01 - 22:30<br>Dimpling + Forno a gás (~30 min)]
+    M -->|"~8 min"| N[15/01 - ~22:38<br>Forno elétrico + Retirada]
     N --> O[16/01 - Manhã<br>Consumo da focaccia]
 ```
 
@@ -168,9 +168,8 @@ flowchart TD
   - Massa muito macia e bem aerada.  
   - Sabor agradável, com acidez equilibrada (para quem aprecia um toque mais azedo).  
   - Uso combinado de fornos (gás e elétrico) para assar e dourar a superfície.
+
 - **Pontos de Melhoria**  
   - Para quem prefere menor acidez, ajustar o ponto do levain e reduzir o tempo de geladeira.  
   - Atenção ao forno elétrico para evitar pontos que queimem antes de dourar por igual.  
   - Consumir logo após sair do forno garante melhor crocância.
-
-Assim concluímos o registro da **Primeira Focaccia de 2025**, com todas as etapas e detalhes relatados. Bom apetite!
